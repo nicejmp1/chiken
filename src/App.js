@@ -2,7 +2,6 @@ import React from 'react';
 import Header from './components/section/Header';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import Main from './components/section/Main';
 import Home from './pages/Home';
 import Atteck from './pages/Atteck';
 import Barun from './pages/Barun';

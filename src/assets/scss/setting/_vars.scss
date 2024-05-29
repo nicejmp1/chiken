@@ -1,6 +1,7 @@
 :root {
-    --mainfont-nanum: "nanumSquareNeo";
-    --mainfont-nexon: "nexonLv1";
+    --fontH: "Hakgyoansim";
+    --fontD: "DoHyeon";
+    --fontG: "GmarketSans";
 
 
     --background: #9ecac9;
@@ -20,7 +21,6 @@
     --white500: #fff;
 
     // 폰트 셋팅
-    font-family: var(--mainfont-nanum), var(--mainfont-nexon);
     font-size: 16px;
     line-height: 1.5;
     font-weight: 400;

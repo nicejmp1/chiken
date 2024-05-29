@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Hakgyoansim';
+    src: url('../../fonts/hakgyo/TTHakgyoansimYeohaengR.woff2') format('woff2'),
+        url('../../fonts/hakgyo/TTHakgyoansimYeohaengR.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DoHyeon';
+    src: url('../../fonts/hyeon/BMDoHyeon.woff2') format('woff2'),
+        url('../../fonts/hyeon/BMDoHyeon.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketSans';
+    src: url('../../fonts/gmarket/GmarketSansTTFBold.woff2') format('woff2'),
+        url('../../fonts/gmarket/GmarketSansTTFBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketSans';
+    src: url('../../fonts/gmarket/GmarketSansTTFMedium.woff2') format('woff2'),
+        url('../../fonts/gmarket/GmarketSansTTFMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarkeSans';
+    src: url('../../fonts/gmarket/GmarketSansTTFLight.woff2') format('woff2'),
+        url('../../fonts/gmarket/GmarketSansTTFLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}

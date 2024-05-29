@@ -1,13 +1,23 @@
 .banner {
-    max-width: 1000px;
-    margin: 0 auto;
-    margin-top: 60px;
-    font-size: 60px;
+    margin-top: 80px;
+    font-size: 3rem;
+    text-align: center;
+    font-family: var(--fontD);
+    font-weight: normal;
 
     p {
         em {
-            color: #fff;
-            font-size: 100px;
+            font-family: var(--fontH);
+            color: #f6ae2a;
+            font-size: 4rem;
         }
     }
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    max-height: 100vh;
 }

@@ -1,11 +1,10 @@
-import React from 'react'
-
+import React from 'react';
+import logo from '../../assets/img/logo3.png'
 const Logo = () => {
     return (
         <div className='header__logo'>
             <a href="/">
-                <em></em>
-                <h1>치킨 브랜드 모음 사이트</h1>
+                <img src={logo} alt="" />
             </a>
         </div>
     )

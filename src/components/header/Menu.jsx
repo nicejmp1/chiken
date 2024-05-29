@@ -7,7 +7,7 @@ const Menu = () => {
         <nav className='header__menu'>
             <ul className='menu'>
                 <li><a href="/">회사소개</a></li>
-                <li><a href="/">메뉴</a>
+                <li><Link to={"atteck"}>메뉴</Link >
                     <div className='submenu'>
                         <ul>
                             {headerMenus.map((menu, key) => (
