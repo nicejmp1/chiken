@@ -19,6 +19,11 @@ const Video = () => {
         event.target.playVideo();
         event.target.mute();  // 비디오를 음소거
         event.target.setPlaybackQuality('hd1080');
+
+        // postMessage 호출 예시
+        const message = { action: 'play' };
+        const targetOrigin = 'https://www.youtube.com';
+        event.target.getIframe().contentWindow.postMessage(message, targetOrigin);
     }
 
     const onEnd = (event) => {

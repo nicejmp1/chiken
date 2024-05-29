@@ -5,8 +5,8 @@ const Main = (props) => {
     return (
         <HelmetProvider>
             <Helmet
-                titleTemplate="%s | Music Youtube"
-                defaultTitle="Music Youtube"
+                titleTemplate="%s | 치킨 브랜드"
+                defaultTitle="치킨 브랜드모음"
                 defer={false}
             >
                 {props.title && <title>{props.title}</title>}

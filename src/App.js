@@ -20,7 +20,6 @@ import Ttobongee from './pages/Ttobongee';
 import Footer from './components/section/Footer';
 
 const App = () => {
-
   return (
     <BrowserRouter>
       <Header />

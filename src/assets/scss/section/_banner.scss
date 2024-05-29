@@ -21,3 +21,58 @@
     margin-top: 30px;
     max-height: 100vh;
 }
+
+.brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 60px;
+
+    h1 {
+        font-family: var(--fontD);
+        font-size: 32px;
+    }
+
+    .swiper {
+        width: 400px;
+        min-height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+
+        /* Center slide text vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        background-color: #000000ce;
+        border-radius: 3px;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        color: #fff;
+        font-size: 30px !important;
+    }
+
+    .swiper-button-prev.swiper-button-disabled,
+    .swiper-button-next.swiper-button-disabled {
+        opacity: 0 !important;
+    }
+}
