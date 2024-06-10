@@ -1,0 +1,120 @@
+.container__logo {
+    width: 90%;
+    max-width: 1440px;
+    margin-inline: auto;
+    margin-top: 100px;
+}
+
+.logo__title {
+    padding-bottom: 30px;
+    font-size: 2.5rem;
+    font-family: var(--fontJ);
+    font-weight: 900;
+
+    em {
+        font-size: 3rem;
+        color: #f00;
+    }
+}
+
+.logo__style {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); // 기본 최소 크기 200px
+    gap: 1rem;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
+    perspective: 1000px;
+
+    @media (max-width: 500px) {
+        height: 200px; // 500px 이하일 때 높이 조정
+    }
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid var(--black);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--black);
+    cursor: pointer;
+
+
+
+    a {
+        p {
+            &:hover {
+                text-decoration: underline;
+                text-underline-position: under;
+            }
+        }
+
+    }
+}
+
+.flip-card-front {
+    span {
+        font-size: 22px;
+        color: var(--white);
+        padding: 10px 20px;
+    }
+
+    .logo-img {
+        display: block;
+        width: 200px;
+        height: 200px;
+        background-color: var(--white);
+        object-fit: contain;
+        object-position: center;
+        border-radius: 22px;
+
+        @media (max-width: 500px) {
+            max-width: 100px; // 500px 이하일 때 너비 조정
+            max-height: 100px; // 500px 이하일 때 높이 조정
+        }
+    }
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+
+    span {
+        font-size: 26px;
+        color: var(--white);
+    }
+
+    p {
+        color: var(--white);
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .logo__style {
+        grid-template-columns: repeat(2, 1fr); // 500px 이하일 때 열 수를 두 개로 제한
+    }
+}

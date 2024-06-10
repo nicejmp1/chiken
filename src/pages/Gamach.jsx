@@ -12,24 +12,27 @@ const Atteck = () => {
 
     return (
         <Main>
-            <h1 className='menu__title'>
-                가마치 치킨
-            </h1>
-            <div className='chiken'>
-                {data.map((item, key) => (
-                    <Fragment key={key}>
-                        <ul className='menu__chiken'>
-                            <div className='menu__list'>
-                                <li className='menu__img'><img src={item.img || defaultImage} alt={item.Menu} /></li>
-                                <li className='tit'>메뉴 : <span>{item.Menu}</span></li>
-                                <li className='sub'>부가설명 : {item.Sub}</li>
-                                <li className='pic'>가격 : {item.Price || '문의해주세요'}</li>
-                            </div>
+            <div className="container">
 
-                        </ul>
+                <h1 className='menu__title'>
+                    가마치 치킨
+                </h1>
+                <div className='chiken'>
+                    {data.map((item, key) => (
+                        <Fragment key={key}>
+                            <ul className='menu__chiken'>
+                                <div className='menu__list'>
+                                    <li className='menu__img'><img src={item.img || defaultImage} alt={item.Menu} /></li>
+                                    <li className='tit'>메뉴 : <span>{item.Menu}</span></li>
+                                    <li className='sub'>부가설명 : {item.Sub}</li>
+                                    <li className='pic'>가격 : {item.Price || '문의해주세요'}</li>
+                                </div>
 
-                    </Fragment>
-                ))}
+                            </ul>
+
+                        </Fragment>
+                    ))}
+                </div>
             </div>
 
         </Main>
