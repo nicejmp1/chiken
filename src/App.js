@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from './components/section/Header';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ThemeProvider, useTheme } from './context/ThemeContext';
+import { DataProvider } from './context/DataContext';
 
 import Home from './pages/Home';
 import Atteck from './pages/Atteck';
@@ -18,11 +20,28 @@ import Mexicana from './pages/Mexicana';
 import Puradak from './pages/Puradak';
 import Ttobongee from './pages/Ttobongee';
 import Footer from './components/section/Footer';
+import Search from './components/section/Search';
 
 const App = () => {
+
   return (
-    <BrowserRouter>
+    <ThemeProvider>
+      <DataProvider>
+        <BrowserRouter>
+          <MainApp />
+        </BrowserRouter>
+      </DataProvider>
+    </ThemeProvider >
+  );
+};
+
+const MainApp = () => {
+  const { theme } = useTheme(); // useTheme 훅을 이곳에서 사용
+
+  return (
+    <div className={`body ${theme}`}>
       <Header />
+      <Search />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/atteck" element={<Atteck />} />
@@ -41,8 +60,9 @@ const App = () => {
         <Route path="/ttobongee" element={<Ttobongee />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </div>
   );
 };
+
 
 export default App;

@@ -13,8 +13,7 @@ const Atteck = () => {
         <Main>
             <div className="container">
                 <h1 className='menu__title'>
-                    <span>순살만공격</span>
-                    <span>메뉴</span>
+                    순살만공격
                 </h1>
                 <div className='chiken'>
                     {data.map((item, key) => (
