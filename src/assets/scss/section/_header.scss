@@ -45,7 +45,7 @@
         background: #242424;
         padding: 5px 10px;
         border-radius: 50px;
-
+    
         input {
             padding: 6px;
             background: transparent;
@@ -54,22 +54,21 @@
             color: #fff;
             font-size: 18px;
             max-width: 200px;
-
+    
             &::placeholder {
                 color: #fff;
                 font-size: 14px;
             }
         }
-
+    
         img {
             width: 20px;
             cursor: pointer;
         }
-
+    
         .search-results {
             position: absolute;
-            top: 100%;
-            /* Adjust as needed */
+            top: 100%; /* Adjust as needed */
             left: 0;
             margin-inline: auto;
             background: #fff;
@@ -83,34 +82,40 @@
             visibility: hidden;
             transform: translateY(-10px);
             transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
-
+    
             /* Hide scrollbar for WebKit browsers (e.g., Chrome, Safari) */
             &::-webkit-scrollbar {
                 width: 0px;
                 background: transparent;
                 /* Optional: just to ensure it's hidden */
             }
-
+    
             /* Hide scrollbar for Firefox */
             scrollbar-width: none;
             /* For Firefox */
-
+    
             &.visible {
                 opacity: 1;
                 visibility: visible;
                 transform: translateY(0);
             }
-
+    
+            .no-results {
+                padding: 1rem;
+                text-align: center;
+                color: #999;
+            }
+    
             .result-item {
                 padding: 1rem;
                 border-bottom: 1px solid #ddd;
                 display: flex;
-
+    
                 .img {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-
+    
                     img {
                         width: 100px;
                         height: 100px;
@@ -118,17 +123,15 @@
                         border: 1px solid var(--black);
                     }
                 }
-
-
-
+    
                 &:last-child {
                     border-bottom: none;
                 }
-
+    
                 &:hover {
                     background: #f1f1f1;
                 }
-
+    
                 .search-item {
                     display: flex;
                     flex-direction: column;

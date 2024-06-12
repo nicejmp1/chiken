@@ -10,14 +10,26 @@ const Search = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [results, setResults] = useState([]);
     const searchBoxRef = useRef(null);
+    const [visible, setVisible] = useState(false);
 
     const handleSearch = () => {
+        if (visible) {
+            setVisible(false);
+            setTimeout(() => setResults([]), 300); // 300ms 후에 결과를 비웁니다
+            return;
+        }
+        if (searchTerm.trim() === '') {
+            setResults([]);
+            setVisible(true);
+            return;
+        }
         const filteredData = data.filter(item => {
             const menuMatch = item.Menu && item.Menu.toLowerCase().includes(searchTerm.toLowerCase());
             const subMatch = item.Sub && item.Sub.toLowerCase().includes(searchTerm.toLowerCase());
             return menuMatch || subMatch;
         });
         setResults(filteredData);
+        setVisible(true);
     };
 
     const handleKeyPress = (e) => {
@@ -28,7 +40,8 @@ const Search = () => {
 
     const handleClickOutside = (event) => {
         if (searchBoxRef.current && !searchBoxRef.current.contains(event.target)) {
-            setResults([]);
+            setVisible(false);
+            setTimeout(() => setResults([]), 300); // 300ms 후에 결과를 비웁니다
         }
     };
 
@@ -54,7 +67,12 @@ const Search = () => {
                 onClick={handleSearch}
                 className='search-icon'
             />
-            <div className={`search-results ${results.length > 0 ? 'visible' : ''}`}>
+            <div className={`search-results ${visible ? 'visible' : ''}`}>
+                {results.length === 0 && visible && (
+                    <div className="no-results">
+                        검색 결과가 존재하지 않습니다
+                    </div>
+                )}
                 {results.map((result, index) => (
                     <div key={index} className="result-item">
                         <div className="img">

@@ -1,6 +1,4 @@
 import React from 'react';
-import search_icon_light from '../../assets/test/search-w.png';
-import search_icon_dark from '../../assets/test/search-b.png';
 import toggle_light from '../../assets/test/night.png';
 import toggle_dark from '../../assets/test/day.png';
 
