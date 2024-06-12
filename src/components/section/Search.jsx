@@ -26,7 +26,8 @@ const Search = () => {
         const filteredData = data.filter(item => {
             const menuMatch = item.Menu && item.Menu.toLowerCase().includes(searchTerm.toLowerCase());
             const subMatch = item.Sub && item.Sub.toLowerCase().includes(searchTerm.toLowerCase());
-            return menuMatch || subMatch;
+            const brandMatch = item.Brand && item.Brand.toLowerCase().includes(searchTerm.toLowerCase());
+            return menuMatch || subMatch || brandMatch;
         });
         setResults(filteredData);
         setVisible(true);

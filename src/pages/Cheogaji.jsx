@@ -20,10 +20,10 @@ const Atteck = () => {
                         <Fragment key={key}>
                             <ul className='menu__chiken'>
                                 <div className='menu__list'>
-                                    <li className='menu__img'><img src={item.imageURL} alt={item.title} /></li>
-                                    <li className='tit'>메뉴 : <span>{item.title}</span></li>
-                                    <li className='sub'>부가설명 : {item.sub}</li>
-                                    <li className='pic'>가격 : {item.money}</li>
+                                    <li className='menu__img'><img src={item.img} alt={item.Menu} /></li>
+                                    <li className='tit'>메뉴 : <span>{item.Menu}</span></li>
+                                    <li className='sub'>부가설명 : {item.Sub}</li>
+                                    <li className='pic'>가격 : {item.Price}</li>
                                 </div>
 
                             </ul>
