@@ -74,7 +74,7 @@ export const headerMenus = [
         src: "/kyedong"
     },
     {
-        title: "멕시카나",
+        title: "멕시카나치킨",
         src: "/mexicana"
     },
     {

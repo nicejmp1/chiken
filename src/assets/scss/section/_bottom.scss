@@ -1,0 +1,31 @@
+.bottom__main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .bottom__title {
+        text-align: center;
+
+        h1 {
+            font-size: 5.6rem;
+            font-family: var(--fontE);
+
+            em {
+                color: #f00;
+                font-size: 7.6rem;
+            }
+        }
+
+        span {
+            font-size: 2rem;
+            font-family: var(--fontE);
+
+            em {
+                color: #f00;
+                font-size: 3rem;
+            }
+
+        }
+    }
+}
