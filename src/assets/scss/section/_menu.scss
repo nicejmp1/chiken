@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 160px;
+    padding-top: 100px;
+    padding-bottom: 60px;
     font-family: var(--fontA);
     font-size: 56px;
 
@@ -73,11 +74,6 @@
     }
 }
 
-.dark {
-    span {
-        color: red;
-    }
-}
 
 .dark {
     .menu__title {

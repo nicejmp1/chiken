@@ -142,7 +142,40 @@ const chartData = [
         "기타": 16.9,
         "잘모름": 21,
     }
-
 ]
 
 export default chartData;
+
+
+export const chartData2 = [
+    {
+        "id": "후라이드",
+        "label": "후라이드",
+        "value": 39.5,
+        "color": "hsl(217, 70%, 50%)"
+    },
+    {
+        "id": "양념치킨",
+        "label": "양념치킨",
+        "value": 27.8,
+        "color": "hsl(297, 70%, 50%)"
+    },
+    {
+        "id": "간장치킨",
+        "label": "간장치킨",
+        "value": 19.2,
+        "color": "hsl(28, 70%, 50%)"
+    },
+    {
+        "id": "갈릭치킨",
+        "label": "갈릭치킨",
+        "value": 5.8,
+        "color": "hsl(325, 70%, 50%)"
+    },
+    {
+        "id": "바베큐치킨",
+        "label": "바베큐치킨",
+        "value": 5.4,
+        "color": "hsl(358, 70%, 50%)"
+    }
+]

@@ -3,10 +3,10 @@
     transition: all 0.5s;
 
     .chart__title {
-        transition: none;
+        transition: all 0.2s;
 
         h1 {
-            padding-top: 60px;
+            padding-top: 30px;
             font-size: 2.6rem;
             font-family: var(--fontE);
 
@@ -16,12 +16,32 @@
             }
         }
     }
+
+    .chart__view {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .dark {
     .chart__main {
         background-color: #222;
         transition: all 0.5s;
+
+        .chart__title {
+            transition: all 0.2s;
+
+            h1 {
+                padding-top: 30px;
+                font-size: 2.6rem;
+                font-family: var(--fontE);
+
+                em {
+                    font-size: 3.8rem;
+                    color: aqua;
+                }
+            }
+        }
 
     }
 }

@@ -76,7 +76,7 @@ const Chart = () => {
     const nivoTheme = theme === 'dark' ? darkTheme : lightTheme;
 
     return (
-        <div style={{ width: '800px', height: '500px', margin: '0 auto', backgroundColor: nivoTheme.background }}>
+        <div style={{ width: '650px', height: '500px', margin: '0 auto', backgroundColor: nivoTheme.background }}>
             <ResponsiveBar
                 data={chartData}
                 keys={[

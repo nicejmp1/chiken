@@ -1,14 +1,19 @@
 import React from 'react'
 import Chart from './Chart'
+import Chart2 from './Chart2'
 
 const ChartMain = () => {
     return (
         <div className="container__logo">
             <div className='chart__main'>
                 <div className="chart__title">
-                    <h1>치킨 프렌차이드 <em>지역별</em> 선호도</h1>
+                    <h1>치킨 브랜드 <em>통계</em> 자료</h1>
                 </div>
-                <Chart />
+                <div className="chart__view">
+                    <Chart />
+                    <Chart2 />
+                </div>
+
             </div>
         </div>
     )
