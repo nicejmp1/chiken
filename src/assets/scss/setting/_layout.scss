@@ -37,13 +37,16 @@ CSS 구조 개요
     margin: 0 auto;
 }
 
-.dark {
 
-    #footer {
+#footer {
+
+    .dark {
         background-color: #222;
         transition: all 0.5s;
     }
+
 }
+
 
 #footer p.maile {
     font-size: 0.875rem;
@@ -96,6 +99,7 @@ CSS 구조 개요
             span {
                 color: #222;
             }
+
             ul {
                 li {
                     span {
@@ -115,9 +119,11 @@ CSS 구조 개요
                 a {
                     color: var(--white);
                 }
+
                 span {
                     color: var(--white);
                 }
+
                 ul {
                     li {
                         span {
@@ -196,6 +202,7 @@ CSS 구조 개요
                 color: var(--white);
             }
         }
+
         .right_bot {
             ul {
                 li {
@@ -206,6 +213,7 @@ CSS 구조 개요
             }
         }
     }
+
     .footer__lnner {
         .right {
             .sns {

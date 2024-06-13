@@ -1,0 +1,27 @@
+.chart__main {
+    background-color: var(--background);
+    transition: all 0.5s;
+
+    .chart__title {
+        transition: none;
+
+        h1 {
+            padding-top: 60px;
+            font-size: 2.6rem;
+            font-family: var(--fontE);
+
+            em {
+                font-size: 3.8rem;
+                color: red;
+            }
+        }
+    }
+}
+
+.dark {
+    .chart__main {
+        background-color: #222;
+        transition: all 0.5s;
+
+    }
+}

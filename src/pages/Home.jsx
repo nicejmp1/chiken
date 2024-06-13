@@ -3,6 +3,7 @@ import Main from '../components/section/Main'
 import Banner from '../components/home/Banner'
 import Video from '../components/video/Video'
 import Logo from '../components/home/Logo'
+import ChartMain from '../components/chart/ChartMain'
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <Banner />
             <Video />
             <Logo />
+            <ChartMain />
         </Main>
     )
 }
