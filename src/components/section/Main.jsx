@@ -13,7 +13,7 @@ const Main = (props) => {
                 <meta name="description" content={props.description} />
             </Helmet>
 
-            <main id='main' role='main' className='containe'>
+            <main id='main' role='main' className='container'>
                 {props.children}
             </main>
 

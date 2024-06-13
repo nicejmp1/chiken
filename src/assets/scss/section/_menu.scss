@@ -2,9 +2,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 110px;
-    font-size: 36px;
-    font-weight: bold;
+    padding-top: 160px;
+    font-family: var(--fontA);
+    font-size: 56px;
+
+    span {
+        display: block;
+        color: var(--black);
+        font-weight: bold;
+        font-size: 24px;
+    }
 }
 
 
@@ -12,24 +19,15 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1rem;
-    padding: 1rem;
 }
 
 .menu__chiken {
     .menu__img {
         width: 100%;
-        min-height: 240px;
-        border-radius: 20px;
-        background-color: var(--black);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
 
         img {
-            width: 200px;
-            height: 200px;
-            border-radius: 12px;
+            width: 100%;
+            height: 100%;
             background-color: var(--black);
         }
     }
@@ -62,6 +60,27 @@
         }
 
     }
+}
 
+.dark .menu__list {
+    .tit {
+        color: #ff0000;
 
+        /* 다크 모드에서 사용할 빨간색 */
+        span {
+            color: red;
+        }
+    }
+}
+
+.dark {
+    span {
+        color: red;
+    }
+}
+
+.dark {
+    .menu__title {
+        color: red;
+    }
 }

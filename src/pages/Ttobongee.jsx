@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import ttobongdata from '../data/ttobongeeChicken/ttobongeeChicken_2024-05-27.json';
+import ttobongdata from '../data/chickenlist-main/ttobongeeChicken/ttobongeeChicken_2024-05-27.json';
 import defaultImage from '../assets/img/defaultck.jpg';
 import Main from '../components/section/Main';
 

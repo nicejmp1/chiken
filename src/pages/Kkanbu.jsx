@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import kkanbudata from '../data/kkanbuChicken/kkanbuChicken_2024-05-27.json';
+import kkanbudata from '../data/chickenlist-main/kkanbuChicken/kkanbuChicken_2024-05-27.json';
 import defaultImage from '../assets/img/defaultck.jpg';
 import Main from '../components/section/Main';
 
@@ -32,7 +32,6 @@ const Atteck = () => {
                 </div>
             </div>
         </Main>
-
     )
 }
 

@@ -3,6 +3,7 @@ import { useTheme } from '../../context/ThemeContext';
 import { useData } from '../../context/DataContext';
 import search_icon_light from '../../assets/test/search-w.png';
 import search_icon_dark from '../../assets/test/search-b.png';
+import { headerMenus } from '../../data/header'; // headerMenus의 경로에 맞게 수정
 
 const Search = () => {
     const { theme } = useTheme();
@@ -28,6 +29,12 @@ const Search = () => {
             const subMatch = item.Sub && item.Sub.toLowerCase().includes(searchTerm.toLowerCase());
             const brandMatch = item.Brand && item.Brand.toLowerCase().includes(searchTerm.toLowerCase());
             return menuMatch || subMatch || brandMatch;
+        }).map(item => {
+            const menu = headerMenus.find(menu => menu.title.replace(/\s/g, '').toLowerCase() === item.Brand.replace(/\s/g, '').toLowerCase());
+            return {
+                ...item,
+                url: menu ? menu.src : '#'
+            };
         });
         setResults(filteredData);
         setVisible(true);
@@ -44,6 +51,10 @@ const Search = () => {
             setVisible(false);
             setTimeout(() => setResults([]), 300); // 300ms 후에 결과를 비웁니다
         }
+    };
+
+    const handleItemClick = (url) => {
+        window.location.href = url;
     };
 
     useEffect(() => {
@@ -75,7 +86,10 @@ const Search = () => {
                     </div>
                 )}
                 {results.map((result, index) => (
-                    <div key={index} className="result-item">
+                    <div 
+                        key={index} 
+                        className="result-item"
+                    >
                         <div className="img">
                             <img src={result.img} alt={result.Menu} />
                         </div>
@@ -84,6 +98,7 @@ const Search = () => {
                             <p>{result.Sub}</p>
                             <span>{result.Price}</span>
                             <span>{result.Brand}</span>
+                            <button className="order-button" onClick={() => handleItemClick(result.url)}>메뉴 보러가기</button>
                         </div>
                     </div>
                 ))}

@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import kyedongdata from '../data/kyedongChicken/kyedongChicken_2024-05-27.json';
+import kyedongdata from '../data/chickenlist-main/kyedongChicken/kyedongChicken_2024-05-27.json';
 import defaultImage from '../assets/img/defaultck.jpg';
 import Main from '../components/section/Main';
 

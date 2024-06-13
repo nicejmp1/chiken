@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import chkickendata from '../data/chkickenPluse/chkickenPluse_2024-05-27.json';
+import chkickendata from '../data/chickenlist-main/chkickenPluse/chkickenPluse_2024-05-27.json';
 import defaultImage from '../assets/img/defaultck.jpg';
 import Main from '../components/section/Main';
 
@@ -26,6 +26,7 @@ const Atteck = () => {
                                     <li className='sub'>부가설명 : {item.Sub}</li>
                                     <li className='pic'>가격 : {item.Price}</li>
                                 </div>
+
                             </ul>
 
                         </Fragment>

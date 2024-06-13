@@ -1,5 +1,5 @@
 .banner {
-    padding-top: 60px;
+    padding-top: 100px;
     font-size: 3rem;
     text-align: center;
     font-family: var(--fontD);
@@ -17,12 +17,6 @@
 .dark {
     .banner {
         color: var(--white);
-
-        p {
-            em {
-                color: #0951D5;
-            }
-        }
     }
 }
 

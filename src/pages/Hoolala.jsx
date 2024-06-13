@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import hoolaladata from '../data/hoolalaChicken/hoolalaChicken_2024-05-27.json';
+import hoolaladata from '../data/chickenlist-main/hoolalaChicken/hoolalaChicken_2024-05-27.json';
 import defaultImage from '../assets/img/defaultck.jpg';
 import Main from '../components/section/Main';
 
@@ -34,7 +34,6 @@ const Atteck = () => {
                 </div>
             </div>
         </Main>
-
     )
 }
 

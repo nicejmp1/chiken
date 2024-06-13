@@ -29,6 +29,7 @@ const Footer = () => {
                             <span>문의 이메일</span>
                             <ul>
                                 <li><Link to="mailto:nicejpm@naver.com">nicejpm@naver.com</Link></li>
+                                <li><Link to="mailto:rlagusals234@gmail.com">rlagusals234@gmail.com</Link></li>
                             </ul>
                         </li>
                     </ul>
@@ -37,10 +38,10 @@ const Footer = () => {
                 <div className="right">
                     <div className="sns">
                         <ul>
-                            <li><Link to="https://github.com/nicejmp1/chiken"><span className='blind'>깃허브</span><FaGithub /></Link></li>
-                            <li><Link to="https://www.instagram.com/jj_m_park"><span className='blind'>인스타그램</span><FaInstagram /></Link></li>
+                            <li><Link to="https://github.com/hyunminkim93/chickenSite"><span className='blind'>깃허브</span><FaGithub /></Link></li>
+                            <li><Link to="https://www.instagram.com/hyunminzz"><span className='blind'>인스타그램</span><FaInstagram /></Link></li>
                             <li><Link to="https://www.youtube.com/channel/UCdfUZ7mSAjSPYsP9ph3uQmg"><span className='blind'>유튜브</span><IoLogoYoutube /></Link></li>
-                            <li><Link to="mailto:nicejpm@naver.com"><span className='blind'>이메일</span><IoMail /></Link></li>
+                            <li><Link to="mailto:rlagusals234@gmail.com"><span className='blind'>이메일</span><IoMail /></Link></li>
                         </ul>
 
                     </div>

@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import gamachdata from '../data/gamachiChicken/gamachiChicken_2024-05-27.json';
+import gamachdata from '../data/chickenlist-main/gamachiChicken/gamachiChicken_2024-05-27.json';
 import defaultImage from '../assets/img/defaultck.jpg';
 import Main from '../components/section/Main';
 
@@ -13,7 +13,6 @@ const Atteck = () => {
     return (
         <Main>
             <div className="container">
-
                 <h1 className='menu__title'>
                     가마치 치킨
                 </h1>
@@ -34,7 +33,6 @@ const Atteck = () => {
                     ))}
                 </div>
             </div>
-
         </Main>
     )
 }

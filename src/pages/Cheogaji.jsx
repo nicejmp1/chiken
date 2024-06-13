@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import Cheogajidata from '../data/cheogajipChicken/cheogajipChicken_2024-05-27.json';
+import Cheogajidata from '../data/chickenlist-main/cheogajipChicken/cheogajipChicken_2024-05-27.json';
 import Main from '../components/section/Main';
 
 const Atteck = () => {
@@ -11,7 +11,7 @@ const Atteck = () => {
 
     return (
         <Main>
-            <div className='container'>
+            <div className="container">
                 <h1 className='menu__title'>
                     처갓집 치킨
                 </h1>
@@ -20,9 +20,9 @@ const Atteck = () => {
                         <Fragment key={key}>
                             <ul className='menu__chiken'>
                                 <div className='menu__list'>
-                                    <li className='menu__img'><img src={item.img} alt={item.Menu} /></li>
+                                    <li className='menu__img'><img src={item.img} alt={item.menu} /></li>
                                     <li className='tit'>메뉴 : <span>{item.Menu}</span></li>
-                                    <li className='sub'>부가설명 : {item.Sub}</li>
+                                    <li className='sub'>부가설명 : {item.sub}</li>
                                     <li className='pic'>가격 : {item.Price}</li>
                                 </div>
 
@@ -32,6 +32,7 @@ const Atteck = () => {
                     ))}
                 </div>
             </div>
+
         </Main>
     )
 }

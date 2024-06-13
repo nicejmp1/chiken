@@ -24,7 +24,7 @@ const Header = () => {
                     ) : (
                         <GiChickenOven size={40} className='logo' />
                     )}
-                    <span>치킨 모음 사이트</span>
+                    <span>Chicken House</span>
                 </a>
             </div>
             <div className='search-box'>

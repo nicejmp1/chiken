@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import dongkidata from '../data/dongkiChicken/dongkiChicken_2024-05-27.json';
+import dongkidata from '../data/chickenlist-main/dongkiChicken/dongkiChicken_2024-05-27.json';
 import defaultImage from '../assets/img/defaultck.jpg';
 import Main from '../components/section/Main';
 

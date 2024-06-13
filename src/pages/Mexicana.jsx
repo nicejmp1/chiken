@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import mexicanadata from '../data/mexicanaChicken/mexicanaChicken_2024-05-27.json';
+import mexicanadata from '../data/chickenlist-main/mexicanaChicken/mexicanaChicken_2024-05-27.json';
 import defaultImage from '../assets/img/defaultck.jpg';
 import Main from '../components/section/Main';
 
