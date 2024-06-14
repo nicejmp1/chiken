@@ -12,10 +12,8 @@
         color: var(--black);
         font-weight: bold;
         font-size: 24px;
-
     }
 }
-
 
 .chiken {
     display: grid;
@@ -25,11 +23,21 @@
 
 .menu__chiken {
     border: 1px solid var(--black);
+    /* 카드 외곽선 */
     border-radius: 28px;
+    /* 카드 모서리 둥글게 */
+    overflow: hidden;
+    /* 콘텐츠가 카드 범위를 넘지 않도록 */
+    margin: 10px;
+    /* 카드 사이의 간격 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* 카드에 섬세한 그림자 추가 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .menu__img {
-        padding: 20px;
-        height: 260px;
+        margin-bottom: 14px;
 
         img {
             width: 100%;
@@ -41,26 +49,34 @@
     }
 
     .menu__list {
-        padding: 20px;
+        padding: 18px;
         line-height: 1.7;
         display: flex;
         flex-direction: column;
-        margin-bottom: 10px;
+        flex-grow: 1;
+        /* 텍스트 부분이 공간을 차지하도록 설정 */
+        justify-content: space-between;
 
+        /* 요소 사이에 공간 배분 */
         .tit {
             font-size: 1.25rem;
             margin-bottom: 20px;
             font-weight: 900;
-            text-align: left;
+            text-align: center;
+            border-bottom: 2px solid var(--black);
+            /* 제목 하단에 보더 추가 */
+            padding-bottom: 10px;
 
+            /* 텍스트와 보더 사이 간격 추가 */
             span {
                 color: var(--black);
             }
         }
 
         .sub {
+            text-align: center;
             margin-bottom: 20px;
-            color: #5c5b5b;
+            color: #5C5B5B;
         }
 
         .pic {
@@ -69,15 +85,37 @@
             border: 1px solid var(--black);
             border-radius: 10px;
             background: var(--black);
+            padding: 10px;
+            /* 가격 표시 영역 안의 패딩 */
+            margin-top: auto;
+            /* 가격을 카드 하단으로 정렬 */
+            display: flex;
+            justify-content: center;
+            /* 가격을 중앙 정렬 */
+            align-items: center;
 
+            /* 가격을 중앙 정렬 */
             span {
                 font-size: 1rem;
                 color: var(--white);
             }
         }
     }
+}
 
+/* 추가적인 CSS로 가격을 일정한 열로 맞추기 */
+.price-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* 오른쪽 정렬 */
+    justify-content: space-between;
+}
 
+.menu__list .pic {
+    width: 100%;
+    text-align: right;
+    /* 가격을 오른쪽 정렬 */
 }
 
 .dark .menu__list {
@@ -100,7 +138,7 @@
     position: absolute;
     right: 228px;
     top: 180px;
-    background-color: #ff5733;
+    background-color: #FF5733;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -110,5 +148,5 @@
 }
 
 .order-button1:hover {
-    background-color: #f6421a;
+    background-color: #F6421A;
 }

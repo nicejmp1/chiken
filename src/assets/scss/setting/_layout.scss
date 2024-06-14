@@ -33,18 +33,19 @@ CSS 구조 개요
 #footer {
     max-width: 1440px;
     min-height: 250px;
-    padding-top: 100px;
+    margin-top: 100px;
     margin: 0 auto;
+    background-color: #aeaeae;
 }
 
 
 
-    #footer {
-        
-        .dark {
-            transition: all 0.5s;
-        }
+#footer {
+
+    .dark {
+        transition: all 0.5s;
     }
+}
 
 
 #footer p.maile {
@@ -98,6 +99,7 @@ CSS 구조 개요
             span {
                 color: #222;
             }
+
             ul {
                 li {
                     span {
@@ -117,9 +119,11 @@ CSS 구조 개요
                 a {
                     color: var(--white);
                 }
+
                 span {
                     color: var(--white);
                 }
+
                 ul {
                     li {
                         span {
@@ -198,6 +202,7 @@ CSS 구조 개요
                 color: var(--white);
             }
         }
+
         .right_bot {
             ul {
                 li {
@@ -208,6 +213,7 @@ CSS 구조 개요
             }
         }
     }
+
     .footer__lnner {
         .right {
             .sns {
