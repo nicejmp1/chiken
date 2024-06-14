@@ -32,6 +32,7 @@ import Ttobongee from './pages/Ttobongee';
 import Search from './components/section/Search';
 
 const App = () => {
+
   return (
     <ThemeProvider>
       <DataProvider>
@@ -40,7 +41,6 @@ const App = () => {
         </BrowserRouter>
       </DataProvider>
     </ThemeProvider >
-
   );
 };
 
@@ -64,6 +64,7 @@ const MainApp = () => {
         <Route path="/pelicana" element={<Pelicana />} />
         <Route path="/chicken60" element={<Chicken60 />} />
         <Route path="/Goobne" element={<Goobne />} />
+        <Route path="/" element={<Home />} />
         <Route path="/atteck" element={<Atteck />} />
         <Route path="/barun" element={<Barun />} />
         <Route path="/cheogaji" element={<Cheogaji />} />
@@ -82,5 +83,4 @@ const MainApp = () => {
     </div>
   );
 };
-
 export default App;

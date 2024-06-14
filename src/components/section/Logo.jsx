@@ -1,6 +1,7 @@
 import React from 'react'
 import { brandlogo } from "../../data/brand"
 import Main from '../section/Main'
+
 const Logo = () => {
     return (
         <Main>

@@ -9,6 +9,10 @@ const Atteck = () => {
         setData(Hosigichickendata);
     }, []);
 
+    const handleOrderClick = () => {
+        window.open('https://map.naver.com/p/search/%ED%98%B8%EC%8B%9D%EC%9D%B4%EB%91%90%EB%A7%88%EB%A6%AC%EC%B9%98%ED%82%A8');
+    };
+
     return (
         <Main>
             <div className="container">
@@ -29,6 +33,12 @@ const Atteck = () => {
 
                         </Fragment>
                     ))}
+                    <button 
+                        className="order-button1"
+                        onClick={handleOrderClick}
+                    >
+                        주문하기
+                    </button>
                 </div>
             </div>
         </Main>

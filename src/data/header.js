@@ -50,7 +50,7 @@ export const headerMenus = [
         src: "/chkicken"
     },
     {
-        title: "당신은지금치킨이땡긴다",
+        title: "당신은치킨이땡긴다",
         src: "/dangchidd"
     },
     {
@@ -62,7 +62,7 @@ export const headerMenus = [
         src: "/gamach"
     },
     {
-        title: "훌라라 치킨",
+        title: "훌랄라치킨",
         src: "/hoolala"
     },
     {

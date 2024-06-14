@@ -10,6 +10,10 @@ const Atteck = () => {
         setData(mexicanadata);
     }, []);
 
+    const handleOrderClick = () => {
+        window.open('https://map.naver.com/p/search/%EB%A9%95%EC%8B%9C%EC%B9%B4%EB%82%98%EC%B9%98%ED%82%A8?c=13.00,0,0,0,dh');
+    };
+
     return (
         <Main>
             <div className="container">
@@ -29,6 +33,12 @@ const Atteck = () => {
                             </ul>
                         </Fragment>
                     ))}
+                    <button 
+                        className="order-button1"
+                        onClick={handleOrderClick}
+                    >
+                        주문하기
+                    </button>
                 </div>
             </div>
         </Main>

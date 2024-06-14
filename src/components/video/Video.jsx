@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import YouTube from 'react-youtube';
+
 const Video = () => {
     const videoIds = ['asciEwftclo', 'HUvuEgQhtss', 'Z3pDU1QcFBI', 'fUs0nBGS9tM', 'bCiPK6w5F8M', 'pn66SdHXKfc', 'RokcblOqDpE']; // 동영상 ID를 이 배열에 추가하세요
     const [currentIndex, setCurrentIndex] = useState(0);
     const [player, setPlayer] = useState(null);
     const [isMuted, setIsMuted] = useState(true);
+
     const opts = {
         height: '590',
         width: '1048',
@@ -15,6 +17,7 @@ const Video = () => {
             mute: 1       // 동영상을 음소거
         }
     };
+
     useEffect(() => {
         if (player && player.getPlayerState() === 1) { // player가 로드되고 재생 중인 경우에만 실행
             if (isMuted) {
@@ -24,6 +27,7 @@ const Video = () => {
             }
         }
     }, [currentIndex, player, isMuted]);
+
     const onReady = (event) => {
         setPlayer(event.target);
         event.target.playVideo();
@@ -34,11 +38,13 @@ const Video = () => {
         }
         event.target.setPlaybackQuality('hd1080');
     };
+
     const onEnd = () => {
         // 동영상이 끝날 때 다음 동영상으로 넘어가고 마지막 동영상이면 처음으로 돌아감
         const nextIndex = (currentIndex + 1) % videoIds.length;
         setCurrentIndex(nextIndex);
     };
+
     const toggleMute = () => {
         if (player && player.getPlayerState() === 1) { // player가 로드되고 재생 중인 경우에만 실행
             if (isMuted) {
@@ -49,6 +55,7 @@ const Video = () => {
             setIsMuted(!isMuted);
         }
     };
+
     return (
         <div style={{
             display: 'flex',
@@ -92,4 +99,5 @@ const Video = () => {
         </div>
     );
 }
+
 export default Video;

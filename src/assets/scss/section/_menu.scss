@@ -2,16 +2,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 100px;
-    padding-bottom: 60px;
     font-family: var(--fontA);
     font-size: 56px;
+    padding-bottom: 60px;
+    padding-top: 100px;
 
     span {
         display: block;
         color: var(--black);
         font-weight: bold;
         font-size: 24px;
+        
     }
 }
 
@@ -74,9 +75,24 @@
     }
 }
 
-
 .dark {
     .menu__title {
         color: red;
     }
+}
+
+.order-button1 {
+    position: absolute;
+    right: 228px;
+    top: 180px;
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+}
+.order-button1:hover {
+    background-color: #f6421a;
 }

@@ -9,6 +9,10 @@ const Atteck = () => {
         setData(pelicanaData);
     }, []);
 
+    const handleOrderClick = () => {
+        window.open('https://map.naver.com/p/search/%ED%8E%98%EB%A6%AC%EC%B9%B4%EB%82%98?c=13.00,0,0,0,dh');
+    };
+
     return (
         <Main>
             <div className="container">
@@ -28,6 +32,12 @@ const Atteck = () => {
 
                         </Fragment>
                     ))}
+                    <button 
+                        className="order-button1"
+                        onClick={handleOrderClick}
+                    >
+                        주문하기
+                    </button>
                 </div>
             </div>
         </Main>

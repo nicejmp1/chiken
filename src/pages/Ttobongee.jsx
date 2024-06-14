@@ -10,6 +10,10 @@ const Atteck = () => {
         setData(ttobongdata);
     }, []);
 
+    const handleOrderClick = () => {
+        window.open('https://map.naver.com/p/search/%EB%98%90%EB%B4%89%EC%9D%B4%ED%86%B5%EB%8B%AD?c=13.00,0,0,0,dh');
+    };
+
     return (
         <Main>
             <div className="container">
@@ -29,6 +33,12 @@ const Atteck = () => {
                             </ul>
                         </Fragment>
                     ))}
+                    <button 
+                        className="order-button1"
+                        onClick={handleOrderClick}
+                    >
+                        주문하기
+                    </button>
                 </div>
             </div>
         </Main>

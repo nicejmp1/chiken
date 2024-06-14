@@ -9,6 +9,10 @@ const Atteck = () => {
         setData(BBQchickendata);
     }, []);
 
+    const handleOrderClick = () => {
+        window.open('https://map.naver.com/p/search/BBQ%EC%B9%98%ED%82%A8?c=14.00,0,0,0,dh');
+    };
+
     return (
         <Main>
             <div className="container">
@@ -30,6 +34,12 @@ const Atteck = () => {
 
                         </Fragment>
                     ))}
+                    <button 
+                        className="order-button1"
+                        onClick={handleOrderClick}
+                    >
+                        주문하기
+                    </button>
                 </div>
             </div>
         </Main>
