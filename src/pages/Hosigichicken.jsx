@@ -24,16 +24,16 @@ const Atteck = () => {
                         <Fragment key={key}>
                             <ul className='menu__chiken'>
                                 <div className='menu__list'>
-                                    <li className='tit'>메뉴 : <span>{item.Menu}</span></li>
-                                    <li className='sub'>부가설명 : {item.Sub}</li>
-                                    <li className='pic'>가격 : {item.Price}</li>
+                                    <li className='tit'><span>{item.Menu}</span></li>
+                                    <li className='sub'><span>{item.Sub}</span></li>
+                                    <li className='pic'><span>{item.Price}</span></li>
                                 </div>
 
                             </ul>
 
                         </Fragment>
                     ))}
-                    <button 
+                    <button
                         className="order-button1"
                         onClick={handleOrderClick}
                     >

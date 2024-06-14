@@ -26,16 +26,16 @@ const Atteck = () => {
                             <ul className='menu__chiken'>
                                 <div className='menu__list'>
                                     <li className='menu__img'><img src={item.img || defaultImage} alt={item.Menu} /></li>
-                                    <li className='tit'>메뉴 : <span>{item.Menu}</span></li>
-                                    <li className='sub'>부가설명 : {item.Sub}</li>
-                                    <li className='pic'>가격 : {item.Price || '문의해주세요'}</li>
+                                    <li className='tit'><span>{item.Menu}</span></li>
+                                    <li className='sub'><span>{item.Sub}</span></li>
+                                    <li className='pic'><span>{item.Price || "문의해주세요"}</span></li>
                                 </div>
 
                             </ul>
 
                         </Fragment>
                     ))}
-                    <button 
+                    <button
                         className="order-button1"
                         onClick={handleOrderClick}
                     >

@@ -9,10 +9,10 @@ const Atteck = () => {
         setData(Atteckdata);
     }, []);
 
-        const handleOrderClick = () => {
-            window.open('https://map.naver.com/p/search/%EC%88%9C%EC%82%B4%EB%A7%8C%EA%B3%B5%EA%B2%A9?c=14.00,0,0,0,dh', '_blank');
-        };
-    
+    const handleOrderClick = () => {
+        window.open('https://map.naver.com/p/search/%EC%88%9C%EC%82%B4%EB%A7%8C%EA%B3%B5%EA%B2%A9?c=14.00,0,0,0,dh', '_blank');
+    };
+
     return (
         <Main>
             <div className="container">
@@ -27,14 +27,15 @@ const Atteck = () => {
                                     <img src={item.img} alt={item.Menu} />
                                 </li>
                                 <div className='menu__list'>
-                                    <li className='tit'>메뉴 : <span>{item.Menu}</span></li>
-                                    <li className='sub'>부가설명 : {item.Sub}</li>
-                                    <li className='pic'>가격 : {item.Price}</li>
+                                    <li className='tit'><span>{item.Menu}</span></li>
+                                    <li className='sub'><span>{item.Sub}</span></li>
+                                    <li className='pic'><span>{item.Price}</span></li>
                                 </div>
+
                             </ul>
                         </Fragment>
                     ))}
-                    <button 
+                    <button
                         className="order-button1"
                         onClick={handleOrderClick}
                     >

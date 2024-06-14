@@ -1,11 +1,8 @@
-
 .chart__main {
     background-color: var(--background);
-    transition: all 0.5s;
     margin-bottom: 100px;
 
     .chart__title {
-        transition: all 0.2s;
 
         h1 {
             padding-top: 30px;
@@ -22,6 +19,7 @@
     .chart__view {
         display: flex;
         justify-content: space-between;
+        transition: all 0.5s;
     }
 }
 
@@ -31,7 +29,6 @@
         transition: all 0.5s;
 
         .chart__title {
-            transition: all 0.2s;
 
             h1 {
                 padding-top: 30px;
@@ -43,6 +40,10 @@
                     color: aqua;
                 }
             }
+        }
+
+        .chart__view {
+            transition: all 0.5s;
         }
 
     }

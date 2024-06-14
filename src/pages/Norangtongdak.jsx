@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import norangtongdak from '../data/chickenlist-main/norangtongdak/norangtongdak_2024-05-17.json';
 import Main from '../components/section/Main';
+import defaultImage from '../assets/img/defaultck.jpg';
 
 const Atteck = () => {
     const [data, setData] = useState([]);
@@ -23,17 +24,19 @@ const Atteck = () => {
                     {data.map((item, key) => (
                         <Fragment key={key}>
                             <ul className='menu__chiken'>
+                                <li className='menu__img'>
+                                    <img src={item.img || defaultImage} alt={item.Menu} />
+                                </li>
                                 <div className='menu__list'>
-                                    <li className='tit'>메뉴 : <span>{item.Menu}</span></li>
-                                    <li className='sub'>부가설명 : {item.Sub}</li>
-                                    <li className='pic'>가격 : {item.Price}</li>
+                                    <li className='tit'><span>{item.Menu}</span></li>
+                                    <li className='sub'><span>{item.Sub}</span></li>
+                                    <li className='pic'><span>{item.Price}</span></li>
                                 </div>
-
                             </ul>
 
                         </Fragment>
                     ))}
-                    <button 
+                    <button
                         className="order-button1"
                         onClick={handleOrderClick}
                     >

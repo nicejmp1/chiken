@@ -13,7 +13,7 @@ const Atteck = () => {
     const handleOrderClick = () => {
         window.open('https://map.naver.com/p/search/%ED%9B%8C%EB%9E%84%EB%9D%BC%EC%B9%98%ED%82%A8?c=13.00,0,0,0,dh');
     };
-    
+
     return (
         <Main>
             <div className="container">
@@ -26,15 +26,15 @@ const Atteck = () => {
                             <ul className='menu__chiken'>
                                 <div className='menu__list'>
                                     <li className='menu__img'><img src={item.img || defaultImage} alt={item.Menu} /></li>
-                                    <li className='tit'>메뉴 : <span>{item.Menu}</span></li>
-                                    <li className='sub'>부가설명 : {item.Sub || '맛있는 치킨 & 치밥'}</li>
-                                    <li className='pic'>가격 : {item.Price || '문의해주세요'}원</li>
+                                    <li className='tit'><span>{item.Menu}</span></li>
+                                    <li className='sub'><span>{item.Sub || "맛있는 치킨 & 치밥"}</span></li>
+                                    <li className='pic'><span>{item.Price || "문의해주세요"}</span></li>
                                 </div>
 
                             </ul>
                         </Fragment>
                     ))}
-                    <button 
+                    <button
                         className="order-button1"
                         onClick={handleOrderClick}
                     >
