@@ -15,14 +15,14 @@ const Footer = () => {
                         <li>
                             <span>고객센터</span>
                             <ul>
-                                <li><Link to="#">문의하기</Link></li>
+                                <li><Link to="mailto:nicejpm@naver.com" target='_blank'>문의하기</Link></li>
                             </ul>
                         </li>
                         <li>
                             <span>팀원</span>
                             <ul>
-                                <li><span>박정민</span></li>
-                                <li><span>김현민</span></li>
+                                <li><Link to="https://github.com/nicejmp1" target='_blank'>박정민</Link></li>
+                                <li><Link to="https://github.com/hyunminkim93" target='_blank'>김현민</Link></li>
                             </ul>
                         </li>
                         <li>
@@ -38,10 +38,10 @@ const Footer = () => {
                 <div className="right">
                     <div className="sns">
                         <ul>
-                            <li><Link to="https://github.com/hyunminkim93/chickenSite"><span className='blind'>깃허브</span><FaGithub /></Link></li>
-                            <li><Link to="https://www.instagram.com/hyunminzz"><span className='blind'>인스타그램</span><FaInstagram /></Link></li>
+                            <li><Link to="https://github.com/nicejmp1"><span className='blind'>깃허브</span><FaGithub /></Link></li>
+                            <li><Link to="https://www.instagram.com/jj_m_park"><span className='blind'>인스타그램</span><FaInstagram /></Link></li>
                             <li><Link to="https://www.youtube.com/channel/UCdfUZ7mSAjSPYsP9ph3uQmg"><span className='blind'>유튜브</span><IoLogoYoutube /></Link></li>
-                            <li><Link to="mailto:rlagusals234@gmail.com"><span className='blind'>이메일</span><IoMail /></Link></li>
+                            <li><Link to="mailto:nicejpm@naver.com"><span className='blind'>이메일</span><IoMail /></Link></li>
                         </ul>
 
                     </div>
