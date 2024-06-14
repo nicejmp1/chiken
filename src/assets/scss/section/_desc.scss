@@ -1,0 +1,26 @@
+.desc {
+    padding-top: 70px;
+    font-size: 1.6rem;
+    text-align: center;
+    font-family: var(--fontD);
+    font-weight: normal;
+    padding-bottom: 100px;
+
+    span {
+        font-size: 1.6rem;
+    }
+
+    p {
+        strong {
+            font-family: var(--fontH);
+            color: #EC1010;
+            font-size: 3rem;
+        }
+
+        em {
+            font-family: var(--fontH);
+            color: #F6AE2A;
+            font-size: 3rem;
+        }
+    }
+}

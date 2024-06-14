@@ -5,6 +5,7 @@ import Logo from '../components/section/Logo'
 import Video from '../components/video/Video'
 import ChartMain from '../components/chart/ChartMain'
 import Bottom from '../components/home/Bottom'
+import Desc from '../components/home/Desc'
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             description="치킨">
             <Banner />
             <Video />
+            <Desc />
             <Logo />
             <ChartMain />
             <Bottom />
