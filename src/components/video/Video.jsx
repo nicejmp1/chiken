@@ -19,24 +19,29 @@ const Video = () => {
     };
 
     useEffect(() => {
-        if (player && player.getPlayerState() === 1) { // player가 로드되고 재생 중인 경우에만 실행
-            if (isMuted) {
-                player.mute();
-            } else {
-                player.unMute();
+        if (player) {  // player 객체가 존재하는지 확인
+            const playerState = player.getPlayerState();
+            if (playerState === 1) { // 재생 중인 경우
+                if (isMuted) {
+                    player.mute();
+                } else {
+                    player.unMute();
+                }
             }
         }
     }, [currentIndex, player, isMuted]);
 
     const onReady = (event) => {
         setPlayer(event.target);
-        event.target.playVideo();
-        if (isMuted) {
-            event.target.mute();  // 비디오를 음소거
-        } else {
-            event.target.unMute(); // 비디오를 음소거 해제
+        if (event.target) {  // event.target 객체가 존재하는지 확인
+            event.target.playVideo();
+            if (isMuted) {
+                event.target.mute();
+            } else {
+                event.target.unMute();
+            }
+            event.target.setPlaybackQuality('hd1080');
         }
-        event.target.setPlaybackQuality('hd1080');
     };
 
     const onEnd = () => {
@@ -46,13 +51,16 @@ const Video = () => {
     };
 
     const toggleMute = () => {
-        if (player && player.getPlayerState() === 1) { // player가 로드되고 재생 중인 경우에만 실행
-            if (isMuted) {
-                player.unMute();
-            } else {
-                player.mute();
+        if (player) {  // player 객체가 존재하는지 확인
+            const playerState = player.getPlayerState();
+            if (playerState === 1) { // 재생 중인 경우
+                if (isMuted) {
+                    player.unMute();
+                } else {
+                    player.mute();
+                }
+                setIsMuted(!isMuted);
             }
-            setIsMuted(!isMuted);
         }
     };
 
