@@ -27,8 +27,6 @@
     border-radius: 28px;
     /* 카드 모서리 둥글게 */
     overflow: hidden;
-    /* 콘텐츠가 카드 범위를 넘지 않도록 */
-    margin: 10px;
     /* 카드 사이의 간격 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     /* 카드에 섬세한 그림자 추가 */
@@ -81,7 +79,6 @@
 
         .pic {
             text-align: center;
-            font-size: 1.25rem;
             border: 1px solid var(--black);
             border-radius: 10px;
             background: var(--black);
@@ -98,6 +95,7 @@
             span {
                 font-size: 1rem;
                 color: var(--white);
+                font-weight: 600;
             }
         }
     }
@@ -120,10 +118,25 @@
 
 .dark .menu__list {
     .tit {
+        border-bottom: 2px solid var(--white);
 
         /* 다크 모드에서 사용할 빨간색 */
         span {
             color: var(--white);
+        }
+    }
+
+    .sub {
+        span {
+            color: var(--white);
+        }
+    }
+
+    .pic {
+        background-color: var(--white);
+
+        span {
+            color: #222;
         }
     }
 }

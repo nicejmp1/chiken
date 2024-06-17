@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import BBQchickendata from '../data/chickenlist-main/bbqchicken/bbqchicken_2024-05-27.json';
 import Main from '../components/section/Main';
+import defaultImage from '../assets/img/defaultck.jpg';
 
 const Atteck = () => {
     const [data, setData] = useState([]);
@@ -23,7 +24,7 @@ const Atteck = () => {
                     {data.map((item, key) => (
                         <Fragment key={key}>
                             <ul className='menu__chiken'>
-                                <li className='menu__img'><img src={item.MenuImage} alt={item.Menu} /></li>
+                                <li className='menu__img'><img src={item.MenuImage || defaultImage} alt={item.Menu} /></li>
                                 <div className='menu__list'>
                                     <li className='tit'><span>{item.Menu}</span></li>
                                     <li className='sub'><span>{item.Sub}</span></li>
