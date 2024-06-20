@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './components/section/Header';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
 import { DataProvider } from './context/DataContext';
 import Home from './pages/Home';
@@ -30,9 +30,9 @@ import Mexicana from './pages/Mexicana';
 import Puradak from './pages/Puradak';
 import Ttobongee from './pages/Ttobongee';
 import Search from './components/section/Search';
+import Loading from './components/section/Loading';
 
 const App = () => {
-
   return (
     <ThemeProvider>
       <DataProvider>
@@ -45,7 +45,26 @@ const App = () => {
 };
 
 const MainApp = () => {
+  const [loading, setLoading] = useState(true);
+  const location = useLocation();
   const { theme } = useTheme(); // useTheme 훅을 이곳에서 사용
+
+  useEffect(() => {
+    // Home 경로가 아닐 때만 로딩 상태를 활성화
+    if (location.pathname !== '/') {
+      setLoading(true);
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 2000);
+      return () => clearTimeout(timer);
+    } else {
+      setLoading(false);
+    }
+  }, [location.pathname]);
+
+  if (loading && location.pathname !== '/') {
+    return <Loading />;
+  }
 
   return (
     <div className={`body ${theme}`}>
@@ -64,7 +83,6 @@ const MainApp = () => {
         <Route path="/pelicana" element={<Pelicana />} />
         <Route path="/chicken60" element={<Chicken60 />} />
         <Route path="/Goobne" element={<Goobne />} />
-        <Route path="/" element={<Home />} />
         <Route path="/atteck" element={<Atteck />} />
         <Route path="/barun" element={<Barun />} />
         <Route path="/cheogaji" element={<Cheogaji />} />

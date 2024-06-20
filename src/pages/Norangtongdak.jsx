@@ -3,7 +3,7 @@ import norangtongdak from '../data/chickenlist-main/norangtongdak/norangtongdak_
 import Main from '../components/section/Main';
 import defaultImage from '../assets/img/defaultck.jpg';
 
-const Atteck = () => {
+const Norangtongdak = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -48,4 +48,4 @@ const Atteck = () => {
     )
 }
 
-export default Atteck
+export default Norangtongdak

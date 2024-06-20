@@ -3,7 +3,7 @@ import puradakdata from '../data/chickenlist-main/puradakChicken/puradakChicken2
 import defaultImage from '../assets/img/defaultck.jpg';
 import Main from '../components/section/Main';
 
-const Atteck = () => {
+const Puradak = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const Atteck = () => {
         <Main>
             <div className="container">
                 <h1 className='menu__title'>
-                    프라닭
+                    푸라닭치킨
                 </h1>
                 <div className='chiken'>
                     {data.map((item, key) => (
@@ -45,4 +45,4 @@ const Atteck = () => {
     )
 }
 
-export default Atteck
+export default Puradak

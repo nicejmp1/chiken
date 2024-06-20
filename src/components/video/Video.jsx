@@ -1,27 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import YouTube from 'react-youtube';
 
 const Video = () => {
-    const videoIds = ['asciEwftclo', 'HUvuEgQhtss', 'Z3pDU1QcFBI', 'fUs0nBGS9tM', 'bCiPK6w5F8M', 'pn66SdHXKfc', 'RokcblOqDpE']; // 동영상 ID를 이 배열에 추가하세요
+    const videoIds = ['asciEwftclo', 'HUvuEgQhtss', 'Z3pDU1QcFBI', 'fUs0nBGS9tM', 'bCiPK6w5F8M', 'pn66SdHXKfc', 'RokcblOqDpE'];
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [player, setPlayer] = useState(null);
+    const playerRef = useRef(null);
     const [isMuted, setIsMuted] = useState(true);
 
     const opts = {
         height: '590',
         width: '1048',
         playerVars: {
-            autoplay: 1,  // 자동 재생 활성화
-            loop: 0,      // 무한 반복 비활성화
+            autoplay: 1,
+            loop: 0,
             controls: 0,
-            mute: 1       // 동영상을 음소거
+            mute: 1
         }
     };
 
     useEffect(() => {
-        if (player) {  // player 객체가 존재하는지 확인
+        const player = playerRef.current;
+        if (player && typeof player.getPlayerState === 'function') {
             const playerState = player.getPlayerState();
-            if (playerState === 1) { // 재생 중인 경우
+            if (playerState === 1) { // 1 == YT.PlayerState.PLAYING
                 if (isMuted) {
                     player.mute();
                 } else {
@@ -29,31 +30,29 @@ const Video = () => {
                 }
             }
         }
-    }, [currentIndex, player, isMuted]);
+    }, [currentIndex, isMuted]);
 
     const onReady = (event) => {
-        setPlayer(event.target);
-        if (event.target) {  // event.target 객체가 존재하는지 확인
-            event.target.playVideo();
-            if (isMuted) {
-                event.target.mute();
-            } else {
-                event.target.unMute();
-            }
-            event.target.setPlaybackQuality('hd1080');
+        playerRef.current = event.target;
+        event.target.playVideo();
+        if (isMuted) {
+            event.target.mute();
+        } else {
+            event.target.unMute();
         }
+        event.target.setPlaybackQuality('hd1080');
     };
 
     const onEnd = () => {
-        // 동영상이 끝날 때 다음 동영상으로 넘어가고 마지막 동영상이면 처음으로 돌아감
         const nextIndex = (currentIndex + 1) % videoIds.length;
         setCurrentIndex(nextIndex);
     };
 
     const toggleMute = () => {
-        if (player) {  // player 객체가 존재하는지 확인
+        const player = playerRef.current;
+        if (player && typeof player.getPlayerState === 'function') {
             const playerState = player.getPlayerState();
-            if (playerState === 1) { // 재생 중인 경우
+            if (playerState === 1) {
                 if (isMuted) {
                     player.unMute();
                 } else {
@@ -72,18 +71,9 @@ const Video = () => {
             alignItems: 'center',
         }}>
             <div style={{ position: 'relative', width: '1048px', height: '590px', marginBottom: '20px' }}>
-                <div style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    zIndex: 1,
-                    backgroundColor: 'transparent'
-                }}></div> {/* 클릭 방지 오버레이 */}
                 <YouTube
-                    key={videoIds[currentIndex]} // key 속성을 추가하여 컴포넌트가 재렌더링되도록 함
-                    videoId={videoIds[currentIndex]}  // 여기에 현재 재생 중인 YouTube 동영상의 ID를 입력
+                    key={videoIds[currentIndex]}
+                    videoId={videoIds[currentIndex]}
                     opts={opts}
                     onReady={onReady}
                     onEnd={onEnd}

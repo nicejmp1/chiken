@@ -3,7 +3,7 @@ import chkickendata from '../data/chickenlist-main/chkickenPluse/chkickenPluse_2
 import defaultImage from '../assets/img/defaultck.jpg';
 import Main from '../components/section/Main';
 
-const Atteck = () => {
+const Chkicken = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -47,4 +47,4 @@ const Atteck = () => {
     )
 }
 
-export default Atteck
+export default Chkicken

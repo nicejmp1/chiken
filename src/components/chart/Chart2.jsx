@@ -7,6 +7,7 @@ const Chart2 = () => {
     const { theme } = useTheme();
 
     const lightTheme = {
+        background: '#f7f6f7',
         axis: {
             domain: {
                 line: {
@@ -35,9 +36,29 @@ const Chart2 = () => {
                 strokeWidth: 1,
             },
         },
+        legends: {
+            text: {
+                fill: "#333333",
+            },
+            effects: [
+                {
+                    on: 'hover',
+                    style: {
+                        itemTextColor: '#000'
+                    }
+                }
+            ]
+        },
+        tooltip: {
+            container: {
+                background: '#FFFFFF',
+                color: '#333333',
+            }
+        }
     };
 
     const darkTheme = {
+        background: '#222',
         axis: {
             domain: {
                 line: {
@@ -69,13 +90,26 @@ const Chart2 = () => {
         legends: {
             text: {
                 fill: "#fff",
+            },
+            effects: [
+                {
+                    on: 'hover',
+                    style: {
+                        itemTextColor: '#fff'
+                    }
+                }
+            ]
+        },
+        tooltip: {
+            container: {
+                background: '#333333',
+                color: '#ffffff',
             }
         }
     };
 
     const nivoTheme = theme === 'dark' ? darkTheme : lightTheme;
     return (
-
         <div style={{ width: '650px', height: '500px', margin: '0 auto', backgroundColor: nivoTheme.background }}>
             <ResponsivePie
                 data={chartData2}
@@ -95,7 +129,7 @@ const Chart2 = () => {
                     ]
                 }}
                 arcLinkLabelsSkipAngle={10}
-                arcLinkLabelsTextColor="#333333"
+                arcLinkLabelsTextColor={theme === 'dark' ? "#ffffff" : "#333333"}
                 arcLinkLabelsThickness={2}
                 arcLinkLabelsColor={{ from: 'color' }}
                 arcLabelsSkipAngle={10}
@@ -104,7 +138,7 @@ const Chart2 = () => {
                     modifiers: [
                         [
                             'darker',
-                            2
+                            theme === 'dark' ? 3 : 2
                         ]
                     ]
                 }}
@@ -188,7 +222,7 @@ const Chart2 = () => {
                         itemsSpacing: 0,
                         itemWidth: 100,
                         itemHeight: 18,
-                        itemTextColor: '#999',
+                        itemTextColor: theme === 'dark' ? '#ffffff' : '#999999',
                         itemDirection: 'left-to-right',
                         itemOpacity: 1,
                         symbolSize: 18,
@@ -197,12 +231,34 @@ const Chart2 = () => {
                             {
                                 on: 'hover',
                                 style: {
-                                    itemTextColor: '#000'
+                                    itemTextColor: theme === 'dark' ? '#ffffff' : '#000000'
                                 }
+                            }
+                        ]
+                    },
+                    {
+                        anchor: 'bottom',
+                        direction: 'column',
+                        justify: false,
+                        translateX: 0,
+                        translateY: 80,
+                        itemsSpacing: 2,
+                        itemWidth: 100,
+                        itemHeight: 20,
+                        itemTextColor: theme === 'dark' ? '#ffffff' : '#999999',
+                        itemDirection: 'left-to-right',
+                        itemOpacity: 1,
+                        symbolSize: 0,
+                        symbolShape: 'circle',
+                        data: [
+                            {
+                                id: 'description',
+                                label: '선호하는 치킨 종류'
                             }
                         ]
                     }
                 ]}
+                theme={nivoTheme}
             />
         </div>
     )

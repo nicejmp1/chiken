@@ -3,7 +3,7 @@ import hoolaladata from '../data/chickenlist-main/hoolalaChicken/hoolalaChicken_
 import defaultImage from '../assets/img/defaultck.jpg';
 import Main from '../components/section/Main';
 
-const Atteck = () => {
+const Hoolala = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -46,4 +46,4 @@ const Atteck = () => {
     )
 }
 
-export default Atteck
+export default Hoolala

@@ -86,8 +86,8 @@ const Search = () => {
                     </div>
                 )}
                 {results.map((result, index) => (
-                    <div 
-                        key={index} 
+                    <div
+                        key={index}
                         className="result-item"
                     >
                         <div className="img">

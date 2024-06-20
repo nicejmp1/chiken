@@ -4,7 +4,7 @@ import defaultImage from '../assets/img/defaultck.jpg';
 import Main from '../components/section/Main';
 
 
-const Atteck = () => {
+const Barun = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -48,4 +48,4 @@ const Atteck = () => {
     )
 }
 
-export default Atteck
+export default Barun

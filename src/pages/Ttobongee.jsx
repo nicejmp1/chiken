@@ -3,7 +3,7 @@ import ttobongdata from '../data/chickenlist-main/ttobongeeChicken/ttobongeeChic
 import defaultImage from '../assets/img/defaultck.jpg';
 import Main from '../components/section/Main';
 
-const Atteck = () => {
+const Ttobongee = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -45,4 +45,4 @@ const Atteck = () => {
     )
 }
 
-export default Atteck
+export default Ttobongee

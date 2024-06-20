@@ -3,7 +3,7 @@ import pelicanaData from '../data/chickenlist-main/pelicana/pelicana_2024-05-27.
 import Main from '../components/section/Main';
 import defaultImage from '../assets/img/defaultck.jpg';
 
-const Atteck = () => {
+const Pelicana = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -48,4 +48,4 @@ const Atteck = () => {
     )
 }
 
-export default Atteck
+export default Pelicana

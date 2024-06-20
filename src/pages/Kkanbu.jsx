@@ -3,7 +3,7 @@ import kkanbudata from '../data/chickenlist-main/kkanbuChicken/kkanbuChicken_202
 import defaultImage from '../assets/img/defaultck.jpg';
 import Main from '../components/section/Main';
 
-const Atteck = () => {
+const Kkanbu = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -45,4 +45,4 @@ const Atteck = () => {
     )
 }
 
-export default Atteck
+export default Kkanbu

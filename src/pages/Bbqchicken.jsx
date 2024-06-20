@@ -3,7 +3,7 @@ import BBQchickendata from '../data/chickenlist-main/bbqchicken/bbqchicken_2024-
 import Main from '../components/section/Main';
 import defaultImage from '../assets/img/defaultck.jpg';
 
-const Atteck = () => {
+const Bbqchicken = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -47,4 +47,4 @@ const Atteck = () => {
     )
 }
 
-export default Atteck
+export default Bbqchicken

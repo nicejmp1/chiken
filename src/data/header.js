@@ -78,7 +78,7 @@ export const headerMenus = [
         src: "/mexicana"
     },
     {
-        title: "푸라닭",
+        title: "푸라닭치킨",
         src: "/puradak"
     },
     {

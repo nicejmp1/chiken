@@ -69,6 +69,22 @@ const Chart = () => {
         legends: {
             text: {
                 fill: "#fff",
+            },
+            effects: [
+                {
+                    on: 'hover',
+                    style: {
+                        itemOpacity: 1,
+                        itemBackground: '#444',
+                        itemTextColor: '#fff'
+                    }
+                }
+            ]
+        },
+        tooltip: {
+            container: {
+                background: '#333333',
+                color: '#ffffff',
             }
         }
     };
@@ -157,7 +173,7 @@ const Chart = () => {
                             {
                                 on: 'hover',
                                 style: {
-                                    itemOpacity: 1
+                                    itemOpacity: 1,
                                 }
                             }
                         ]

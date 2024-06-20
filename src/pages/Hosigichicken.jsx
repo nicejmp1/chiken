@@ -3,7 +3,7 @@ import Hosigichickendata from '../data/chickenlist-main/Hosigichicken/Hosigichic
 import Main from '../components/section/Main';
 import defaultImage from '../assets/img/defaultck.jpg';
 
-const Atteck = () => {
+const Hosigichicken = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -47,4 +47,4 @@ const Atteck = () => {
     )
 }
 
-export default Atteck
+export default Hosigichicken

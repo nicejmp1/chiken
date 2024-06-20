@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useState } from 'react';
 import Cheogajidata from '../data/chickenlist-main/cheogajipChicken/cheogajipChicken_2024-05-27.json';
 import Main from '../components/section/Main';
 
-const Atteck = () => {
+const Cheogaji = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -47,4 +47,4 @@ const Atteck = () => {
     )
 }
 
-export default Atteck
+export default Cheogaji

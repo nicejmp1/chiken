@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useState } from 'react';
 import chicken60data from '../data/chickenlist-main/60chicken/60chicken_2024-05-27.json';
 import Main from '../components/section/Main';
 
-const Atteck = () => {
+const Chicken60 = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -46,4 +46,4 @@ const Atteck = () => {
     )
 }
 
-export default Atteck
+export default Chicken60

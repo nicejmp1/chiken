@@ -3,7 +3,7 @@ import kyedongdata from '../data/chickenlist-main/kyedongChicken/kyedongChicken_
 import defaultImage from '../assets/img/defaultck.jpg';
 import Main from '../components/section/Main';
 
-const Atteck = () => {
+const Kyedong = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -45,4 +45,4 @@ const Atteck = () => {
     )
 }
 
-export default Atteck
+export default Kyedong

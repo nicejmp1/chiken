@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useState } from 'react';
 import nenechickendata from '../data/chickenlist-main/nenechicken/nenechicken_2024-05-27.json';
 import Main from '../components/section/Main';
 
-const Atteck = () => {
+const Nenechicken = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -47,4 +47,4 @@ const Atteck = () => {
     )
 }
 
-export default Atteck
+export default Nenechicken

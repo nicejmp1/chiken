@@ -3,7 +3,7 @@ import gamachdata from '../data/chickenlist-main/gamachiChicken/gamachiChicken_2
 import defaultImage from '../assets/img/defaultck.jpg';
 import Main from '../components/section/Main';
 
-const Atteck = () => {
+const Gamach = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -47,4 +47,4 @@ const Atteck = () => {
     )
 }
 
-export default Atteck
+export default Gamach

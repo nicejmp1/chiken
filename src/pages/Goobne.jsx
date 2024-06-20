@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useState } from 'react';
 import Goobnedata from '../data/chickenlist-main/goobne/goobne_2024-05-08.json';
 import Main from '../components/section/Main';
 
-const Atteck = () => {
+const Goobne = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -46,4 +46,4 @@ const Atteck = () => {
     )
 }
 
-export default Atteck
+export default Goobne

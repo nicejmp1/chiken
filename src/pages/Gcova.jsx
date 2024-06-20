@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useState } from 'react';
 import Gcovachickendata from '../data/chickenlist-main/gcova/gcova_2024-05-27.json';
 import Main from '../components/section/Main';
 
-const Atteck = () => {
+const Gcova = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -46,4 +46,4 @@ const Atteck = () => {
     )
 }
 
-export default Atteck
+export default Gcova

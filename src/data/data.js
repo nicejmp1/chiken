@@ -60,6 +60,6 @@ const data = allData.map(item => ({
     Brand: item.Brand || '브랜드 정보 없음'
 }));
 
-console.log(data); // 데이터 확인용
+// console.log(data); // 데이터 확인용
 
 export default data;

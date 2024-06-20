@@ -1,8 +1,8 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import kyochonchickendata from '../data/chickenlist-main/kyochonchicken/kyochonchicken_2024-05-27.json';
+import kyochonchickendata from '../data/chickenlist-main/kyochonchicken/kyochonchicken_2024-05-26.json';
 import Main from '../components/section/Main';
 
-const Atteck = () => {
+const Kyochonchicken = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -46,4 +46,4 @@ const Atteck = () => {
     )
 }
 
-export default Atteck
+export default Kyochonchicken

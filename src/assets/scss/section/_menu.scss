@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     font-family: var(--fontA);
-    font-size: 56px;
+    font-size: 60px;
     padding-bottom: 60px;
     padding-top: 100px;
 
@@ -23,13 +23,9 @@
 
 .menu__chiken {
     border: 1px solid var(--black);
-    /* 카드 외곽선 */
     border-radius: 28px;
-    /* 카드 모서리 둥글게 */
     overflow: hidden;
-    /* 카드 사이의 간격 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* 카드에 섬세한 그림자 추가 */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -101,6 +97,12 @@
     }
 }
 
+.dark {
+    .menu__chiken {
+        border: 1px solid var(--white);
+    }
+}
+
 /* 추가적인 CSS로 가격을 일정한 열로 맞추기 */
 .price-column {
     display: flex;
@@ -143,7 +145,7 @@
 
 .dark {
     .menu__title {
-        color: red;
+        color: var(--white);
     }
 }
 
