@@ -62,4 +62,33 @@
   
 - **로딩 소스**: 로딩 소스를 활용하여 웹 페이지가 로드되는 동안 사용자에게 시각적 피드백을 제공하여 기다리는 동안의 불편함을 줄입니다. 로딩 소스를 통해 사용자는 로딩 상태를 명확히 인지할 수 있으며, 웹 페이지의 신뢰성을 높이는 데 도움이 됩니다.
 
+<br>
+
+## 배너 비디오 재생
+<img width="1224" alt="image" src="https://github.com/nicejmp1/chiken/assets/163364733/3b707a64-cdc0-4474-867a-5120b544e9ac">
+
+> 배너 비디오 재생으로 사용자의 관심을 끌고 시각적인 홍보 효과를 보여 주었습니다.
+
+<br>
+
+## 로고 선택
+<img width="779" alt="image" src="https://github.com/nicejmp1/chiken/assets/163364733/d943fe18-82f1-4c7e-828d-5600aa5d71fb">
+<img width="1080" alt="image" src="https://github.com/nicejmp1/chiken/assets/163364733/25fbfdfd-c114-4114-87fc-cf8b50d52848">
+
+>모든 브랜드의 데이터를 활용하여 사용자가 원하는 로고를 클릭 하였을때 그에 맞는 메뉴가 나오게 구현하였습니다.
+
+<br>
+
+## 통계 차트
+<img width="1311" alt="image" src="https://github.com/nicejmp1/chiken/assets/163364733/10f76cfd-7cee-47ab-a4fc-7c9c8c42d782">
+
+>  Nivo 라이브러리를 사용하여 치킨 브랜드의 통계 자료를 흥미로운 요소로 사용자들에게 보여주고 싶어 구현하였습니다.
+
+## 검색기능
+<img width="1453" alt="image" src="https://github.com/nicejmp1/chiken/assets/163364733/d93e4021-eed7-454e-8370-9f2c4fa4841c">
+
+> 검색기능을 통해 브랜드면 브랜드, 치킨이면 치킨, 키워드에 맞게 검색이 되도록 구현하였습니다. 
+
+
+
 
